@@ -152,8 +152,13 @@
                 scores.playerMove = playerMove;
                 scores.c_move= c_move;
                 scores.storeResult = result;
-                
 
+                document.querySelector('.show-moves').innerHTML = `You <img src="${scores.playerMove}.png" class="result-img"> <img src="${scores.c_move}.png" class="result-img"> Computer` ;
+           
+            document.querySelector('.show-result').innerHTML = `${scores.storeResult}` ;
+            document.querySelector('.shows-cores').innerHTML = `Wins: ${scores.wins} Ties: ${scores.ties} Loses: ${scores.loses}
+Total ${scores.total}`;
+                
                 localStorage.setItem('scores',JSON.stringify(scores));
 
                 printScore();
